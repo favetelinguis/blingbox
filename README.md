@@ -11,4 +11,7 @@ I use the following tools
 Clone the repository to your $HOME, this repo will act as your new $HOME while in blingbox.
 `git clone --depth 1 https://github.com/favetelinguis/blingbox.git ~/`
 
-Check `~/blingbox/projects/blingbox/Justfile` you need to run `create-blingbox` and then `wezterm` you should now have a working blingbox!
+Check `~/blingbox/projects/blingbox/Justfile` and run the following commands:
+  1. `create-blingbox`
+  2. `wezterm`
+  3. `init-blingbox`

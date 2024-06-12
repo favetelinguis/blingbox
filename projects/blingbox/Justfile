@@ -1,11 +1,18 @@
 build-blingbase:
     podman build -t blingbase .
 
+# Run this as your first command
 create-blingbox: build-blingbase 
     distrobox assemble create
 
+# Then enter your new blingbox
 wezterm:
     distrobox enter bling_base --no-tty -- wezterm
+
+# Make initial setup
+init-blingbox:
+    helix -g fetch
+    helix -g build
     
 remove-blingbox: 
     distrobox assemble rm

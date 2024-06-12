@@ -1,10 +1,8 @@
 FROM registry.opensuse.org/opensuse/distrobox
 
 RUN zypper --non-interactive install \
-    # when i did helix -g build i need gcc-c++ and maby also clang
-    # test this next time to see which  need, start with only gcc-c++
-    # fire-code-fonts \ test on a clean machine if this gives my fira code or if i need to install on host
-    # gcc-c++ \
+    # Needed to do helix -g build
+    gcc-c++ \
     helix xclip \
     wezterm lua-language-server \
     direnv \

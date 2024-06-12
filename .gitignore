@@ -2,3 +2,4 @@
 .local
 .cache
 .ssh
+projects/blingbox/.config/helix/runtime
