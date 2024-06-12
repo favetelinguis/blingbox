@@ -1,0 +1,3 @@
+theme = "catppuccin_mocha"
+[editor]
+gutters = ["diagnostics", "spacer", "diff"]
