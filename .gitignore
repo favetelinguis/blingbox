@@ -3,3 +3,4 @@
 .cache
 .ssh
 projects/blingbox/.config/helix/runtime
+.gitconfig
