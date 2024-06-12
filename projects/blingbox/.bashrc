@@ -27,4 +27,10 @@ if command -v lazygit > /dev/null 2>&1; then
     alias lg=lazygit
 fi
 
+# use ctrl-z to toggle in and out of bg
+if [[ $- == *i* ]]; then 
+  stty susp undef
+  bind '"\C-z":" fg\015"'
+fi
+
 source /home/henriklarsson/blingbox/.config/broot/launcher/bash/br

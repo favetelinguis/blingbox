@@ -22,8 +22,10 @@ Check `~/blingbox/projects/blingbox/Justfile` and run the following commands:
 ## Notable features
   * This project relies on fully running with distrobox, WezTerm has been setup using ExecDomain so that once inside a docker container in WezTerm opening new splits will retain that context. There is also a project finder that open projects in new Workspaces where each project can specify the distrobox context it should use. Projects should be placed in ~/projects and have a special file .wezp:<distrobox to use as context>.
   * Tight integration with Broot and panes, you can open files from broot and have then open in the existing Helix instance.
+  * Toggle fg/bg using Ctrl-z
 
 ## Places I have used to create this, far from all are included, I have taken inspiration from so many sources.
 https://quantonganh.com/
 https://github.com/quantonganh/helix-wezterm
 https://www.railsdev.dev/blog/wezterm-workspace-switcher-api
+https://schulz.dk/2022/01/26/using-ctrl-z-to-toggle-process-in-fg-bg/
