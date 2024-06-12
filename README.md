@@ -3,8 +3,7 @@ Experimenting with distrobox based dev environment
 
 ## TODO
   * Make is possible to switch back to default in project switcher or add shortcut for that
-  * Add verb to broot to open file in existing helix pane or create one.
-
+  * Add verb to broot to open file in existing helix pane or create one. Like https://quantonganh.com/2023/08/02/open-same-file-in-already-running-helix.md
 ## Prereq
 I use the following tools
 * Podman

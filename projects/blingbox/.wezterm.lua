@@ -25,9 +25,15 @@ config.color_scheme = 'Catppuccin Mocha'
 config.font_size = 12
 config.line_height = 1.2
 
+-- TODO: dissable all default bindings 
+-- use CTRL hjkl for moving windows and CTRL HJKL for splitting
+-- Other keys are prefixed with CTRL ALT 
+-- CTRL L debug use in rebind and 
+-- command pallet CRTL P also use
+-- My project switcher under ALT CTRL p
 config.keys = {
 
-  {
+  { -- TODO CommandPallete is much nicer, can I use that GUI insted for project switcher?
     mods = "ALT",
     key = "y",
     action = wezterm.action_callback(function(window, pane)
@@ -41,7 +47,7 @@ config.keys = {
         for part in string.gmatch(v, "([^/]+)") do
           table.insert(parts, part)
         end
-        table.insert(workspaces, { id = v, label = "-" .. parts[4] .. parts[5] })
+        table.insert(workspaces, { id = v, label = "-" .. parts[5] .. parts[6] })
       end
       window:perform_action(
         act.InputSelector({
@@ -66,7 +72,7 @@ config.keys = {
                   name = label,
                   spawn = {
                     label = "Workspace: " .. label,
-                    cwd = "/" .. path_parts[1] .. "/" .. path_parts[2] .. "/" .. path_parts[3] .. "/" .. path_parts[4],
+                    cwd = "/" .. path_parts[1] .. "/" .. path_parts[2] .. "/" .. path_parts[3] .. "/" .. path_parts[4] .. "/" .. path_parts[5],
                     domain = { DomainName = "distrobox:" .. parts[2] },
                   },
                 }),
