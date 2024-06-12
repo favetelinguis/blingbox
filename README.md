@@ -1,6 +1,10 @@
 # blingbox
 Experimenting with distrobox based dev environment
 
+## TODO
+  * Make is possible to switch back to default in project switcher or add shortcut for that
+  * Add verb to broot to open file in existing helix pane or create one.
+
 ## Prereq
 I use the following tools
 * Podman
@@ -21,4 +25,6 @@ Check `~/blingbox/projects/blingbox/Justfile` and run the following commands:
   * Tight integration with Broot and panes, you can open files from broot and have then open in the existing Helix instance.
 
 ## Places I have used to create this, far from all are included, I have taken inspiration from so many sources.
+https://quantonganh.com/
 https://github.com/quantonganh/helix-wezterm
+https://www.railsdev.dev/blog/wezterm-workspace-switcher-api
