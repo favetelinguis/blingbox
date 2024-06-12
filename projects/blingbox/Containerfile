@@ -1,0 +1,23 @@
+FROM registry.opensuse.org/opensuse/distrobox
+
+RUN zypper --non-interactive install \
+    # when i did helix -g build i need gcc-c++ and maby also clang
+    # test this next time to see which  need, start with only gcc-c++
+    # fire-code-fonts \ test on a clean machine if this gives my fira code or if i need to install on host
+    # gcc-c++ \
+    helix xclip \
+    wezterm lua-language-server \
+    direnv \
+    gopass \
+    ripgrep fd gawk \
+    fzf \
+    just \
+    lazygit \
+    broot \
+    starship \
+    zoxide
+
+# Share some commands with host
+RUN ln -fs /usr/bin/distrobox-host-exec /usr/bin/podman
+RUN ln -fs /usr/bin/distrobox-host-exec /usr/bin/distrobox
+RUN ln -fs /usr/bin/distrobox-host-exec /usr/bin/flatpak

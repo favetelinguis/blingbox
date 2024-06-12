@@ -1,0 +1,1 @@
+/home/henriklarsson/blingbox/projects/blingbox/.wezterm.lua

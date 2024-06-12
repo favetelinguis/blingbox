@@ -1,0 +1,11 @@
+build-blingbase:
+    podman build -t blingbase .
+
+create-blingbox: build-blingbase 
+    distrobox assemble create
+
+wezterm:
+    distrobox enter bling_base --no-tty -- wezterm
+    
+remove-blingbox: 
+    distrobox assemble rm
