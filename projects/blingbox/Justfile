@@ -4,10 +4,7 @@ build-blingbase:
 # Run this as your first command
 create-blingbox: build-blingbase 
     distrobox assemble create
-
-# Then enter your new blingbox
-wezterm:
-    distrobox enter bling_base --no-tty -- wezterm
+    distrobox enter bling_base -- distrobox-export --app wezterm
 
 # Make initial setup
 init-blingbox:

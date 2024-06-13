@@ -10,22 +10,12 @@
 # here, since multilingual X sessions would not work properly if LANG is over-
 # ridden in every subshell.
 
-if command -v direnv > /dev/null 2>&1; then
-  eval "$(direnv hook bash)"
-fi
-if command -v zoxide > /dev/null 2>&1; then
-    eval "$(zoxide init --cmd j bash)"
-fi
-if command -v starship > /dev/null 2>&1; then
-    eval "$(starship init bash)"
-fi
-if command -v helix > /dev/null 2>&1; then
-    alias hx=helix
-    export EDITOR=helix
-fi
-if command -v lazygit > /dev/null 2>&1; then
-    alias lg=lazygit
-fi
+eval "$(direnv hook bash)"
+eval "$(starship init bash)"
+
+alias hx=helix
+alias lll="br -sdph"
+alias ll="br -sdh"
 
 # use ctrl-z to toggle in and out of bg
 if [[ $- == *i* ]]; then 
@@ -33,4 +23,31 @@ if [[ $- == *i* ]]; then
   bind '"\C-z":" fg\015"'
 fi
 
+# Replaces the need to zoxide etal
+function j {
+    br -c $1 $HOME
+}
+
 source /home/henriklarsson/blingbox/.config/broot/launcher/bash/br
+
+# My git aliases
+alias gg="br --git-status"
+ # one-line log
+alias gl="git log --pretty=format:'%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]' --decorate --date=short"
+
+alias ga="git add"
+alias gap="git add -p"
+alias gc="git commit --verbose"
+alias gca="git commit -a --verbose"
+alias gcm="git commit -m"
+alias gcam="git commit -a -m"
+alias gm="git commit --amend --verbose"
+alias gd="git diff"
+alias gds="git diff --stat"
+alias gdc="git diff --cached"
+alias gs="git status -s"
+alias gco="git checkout"
+alias gcob="git checkout -b"
+# list branches sorted by last modified
+alias gb="git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+# END my git aliases

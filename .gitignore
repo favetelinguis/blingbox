@@ -3,6 +3,5 @@
 .cache
 .ssh
 projects/blingbox/.config/helix/runtime
-.gitconfig
-projects/*
-!projects/blingbox
+.m2
+projects/blingbox/.config/clojure

@@ -51,7 +51,22 @@ verbs: [
         invocation: git_diff
         shortcut: gd
         leave_broot: false
-        execution: "git difftool -y {file}"
+        execution: "git diff {file}"
+    }
+
+    {
+        invocation: git_add
+        shortcut: ga
+        key: ctrl-a
+        leave_broot: false
+        execution: "git add {file}"
+    }
+
+    {
+        invocation: git_checkout
+        shortcut: gco
+        leave_broot: false
+        execution: "git checkout {file}"
     }
 
     # On ctrl-b, propose the creation of a copy of the selection.
