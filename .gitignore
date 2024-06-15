@@ -10,6 +10,5 @@ projects/blingbox/.config/clojure
 go
 .gnupg
 projects/blingbox/.config/gopass
-projects/goplay
-projects/notes
-projects/pmplay
+!projects/blingbox
+projects/*

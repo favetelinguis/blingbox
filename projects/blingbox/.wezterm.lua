@@ -39,7 +39,7 @@ config.keys = {
     action = wezterm.action_callback(function(window, pane)
       -- Here you can dynamically construct a longer list if needed
       local home = wezterm.home_dir
-      local success, stdout, stderr = wezterm.run_child_process { 'fd', '--hidden', '-t', 'f', '--max-depth', '2', '.wezp:', home .. '/projects' }
+      local success, stdout, stderr = wezterm.run_child_process { 'fd','--no-ignore-vcs', '--hidden', '-t', 'f', '--max-depth', '2', '.wezp:', home .. '/projects' }
 
       local workspaces = {}
       for i, v in ipairs(wezterm.split_by_newlines(stdout)) do
