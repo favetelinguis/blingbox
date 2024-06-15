@@ -14,6 +14,7 @@ eval "$(direnv hook bash)"
 eval "$(starship init bash)"
 
 alias hx=helix
+alias gg=gitui
 
 # use ctrl-z to toggle in and out of bg
 if [[ $- == *i* ]]; then 

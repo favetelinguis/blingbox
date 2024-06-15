@@ -9,3 +9,7 @@ projects/blingbox/.config/clojure
 .wget-hsts
 go
 .gnupg
+projects/blingbox/.config/gopass
+projects/goplay
+projects/notes
+projects/pmplay
