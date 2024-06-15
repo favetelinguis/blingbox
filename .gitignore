@@ -5,3 +5,7 @@
 projects/blingbox/.config/helix/runtime
 .m2
 projects/blingbox/.config/clojure
+.envrc
+.wget-hsts
+go
+.gnupg

@@ -7,3 +7,7 @@ enable = true
 
 [editor.file-picker]
 hidden = false
+
+[keys.normal]
+f = "goto_word"
+C-q = [":pipe gpt -"]

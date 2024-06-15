@@ -26,5 +26,3 @@ test -z "$PROFILEREAD" && . /etc/profile || true
 
 [ ! -e /run/user/1000/pueue.pid ] && pueued -d
 
-export EDITOR=helix
-export PAGER=bat

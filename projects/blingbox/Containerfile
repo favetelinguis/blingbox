@@ -3,15 +3,19 @@ FROM registry.opensuse.org/opensuse/distrobox
 RUN zypper --non-interactive install \
     # Needed to do helix -g build
     gcc-c++ \
-    helix bat git-delta xclip \
+    helix xclip \
     wezterm lua-language-server \
     direnv \
     gopass \
     ripgrep fd gawk \
     just \
     pueue \
+    gitui \
     broot \
+    chezmoi \
     starship
+
+RUN curl -L -o gpt https://github.com/kardolus/chatgpt-cli/releases/latest/download/chatgpt-linux-amd64 && chmod +x gpt && sudo mv gpt /usr/local/bin/
 
 # Share some commands with host
 RUN ln -fs /usr/bin/distrobox-host-exec /usr/bin/podman

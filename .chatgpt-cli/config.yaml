@@ -1,0 +1,3 @@
+omit_history: true
+role: You are a helpful assistant for a professional software engineer giving concise answers inside a terminal editor.
+model: gpt-4o
